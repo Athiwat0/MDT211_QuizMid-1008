@@ -88,29 +88,9 @@ static void BackToMainMenuLogin() {
     else if(MenuLogin == 2){
 
             BackToMainMenu();
-        }
-        
-
-       
+        } 
             
     }
 
-
-
-
-
-static string InputName() {
-        Console.Write("Name :");
-        return Console.ReadLine();
-    }
-
-static void PrintTest1() {
-        Console.WriteLine("Welcome to Test1");
-    }
-static void PrintTest2() {
-        Console.WriteLine("Welcome to Test2");
-    }
-
-  
 
 }
