@@ -17,14 +17,11 @@ public class ReserveSeats{
 
     public static void InputSeatFromKeyboard() 
     {
-       
         Console.Write("Please input Seat : ");
         string Seat = Console.ReadLine();
        
         Console.Write("Seat of your choice : {0}", Seat);
         Console.ReadKey();
-
-
    
     }
     

@@ -23,6 +23,7 @@ public class Register{
             
         }
         else if(Menu == 3){
+            Console.WriteLine("Enter to Back Menu");
             return;
             
         }
@@ -34,8 +35,34 @@ public class Register{
     {
         Console.Clear();
         Console.WriteLine("Register for the event (Guest)");
-        Console.Write("Input name prefix : ");
-        string nameprefix = Console.ReadLine();
+
+       // Console.Write("Input name prefix : ");
+      //  string nameprefix = Console.ReadLine();
+        static string GetPrefix(){
+           Console.WriteLine("====================================================");
+           Console.WriteLine("1 = Mr.");
+           Console.WriteLine("2 = Ms.");
+           Console.WriteLine("3 = Mrs.");
+           Console.Write("pls select your Prefix :");
+           int input = int.Parse(Console.ReadLine());
+           if(input == 1) {
+            return "Mr";
+            }
+           else if (input == 2){
+            return "Ms";
+           }
+           else if (input == 3){
+            return "Mrs";
+           }
+            else {
+            return GetPrefix();
+          }
+
+        }
+
+        GetPrefix();
+
+
         Console.Write("Input name : ");
         string name = Console.ReadLine();
         Console.Write("Input surname : ");
@@ -60,7 +87,7 @@ public class Register{
         Console.Clear();
         Console.WriteLine("Your information");
         Console.WriteLine("====================================================");
-        Console.WriteLine("Name : {0}{1} {2}",nameprefix,name,surname);
+        Console.WriteLine("Name : {0}{1} {2}",GetPrefix,name,surname);
         Console.WriteLine("Age : {0}",age);
         Console.WriteLine("Email : {0}",email);
         Console.WriteLine("====================================================");
